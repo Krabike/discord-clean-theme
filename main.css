@@ -1,7 +1,8 @@
 /* Variables */
 :root {
-	--custom-accent-color: rgb(120, 101, 228);
-	--custom-accent-color-translucent: rgba(112, 70, 190, 0.12);
+	--custom-accent: oklch(0.9 0.25 285);
+	--custom-accent-color: color-mix(in oklab, var(--custom-accent), transparent);
+	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 88%);
 }
 
 /* Activities */
