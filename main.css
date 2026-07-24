@@ -46,12 +46,17 @@ ul[class*="content"] [class*="sectionDivider"] {
 
 /* Top bar help and inbox */
 [class*="bar"] [class*="trailing"] {
-	& :is([class*="clickable"], [class*="anchor"]) {
-		display: none !important;
+	& > *:not([class*=winButtons]) {
+		display: none;
 	}
 
 	& [class*="winButtons"]::before {
 		display: none;
 	}
+	height: 30px;
+}
 
+/* Clear text transform at connection line*/
+[class*=connection] {
+	text-transform: none;
 }
