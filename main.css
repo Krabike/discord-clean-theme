@@ -31,7 +31,6 @@ div[data-list-item-id*=members]:has([class*=infoSection]){
 }
 
 [class*=upperBadge], [class*=lowerBadge] {
-    /* padding: 2px; */
     box-shadow: 0 0 0 2px var(--background-base-lowest);
     border-radius: 100%;
     background-color: var(--background-base-lowest);
@@ -89,6 +88,11 @@ ul[class*=content] {
 	}
 }
 
+/* Nitro icon near demo quality */
+[class*=perksDemoContainer] svg {
+	display: none;
+}
+
 /* Accent color */
 * {
 	--status-speaking: var(--custom-accent-color);
@@ -105,6 +109,7 @@ ul[class*=content] {
 	--__card-background-color: var(--custom-accent-color-translucent) !important;
 	--message-mentioned-background-default: var(--custom-accent-color-translucent);
 	--icon-feedback-warning: var(--custom-accent-color);
+	--opacity-green-12: var(--custom-accent-color-translucent) !important;
 }
 
 
@@ -126,27 +131,17 @@ ul[class*=content] {
 	}
 }
 
-[class*=gameWrapper] [class*=icon] {
-	background-color: var(--custom-accent-color) !important;
-}
-
-[class*=perksDemoContainer] svg {
-	display: none;
-}
-
-[class*=member] [class*=icon] {
-	fill: var(--custom-accent-color) !important;
-	color: var(--custom-accent-color) !important;
-}
-
+[class*=liveSmall],
+[class*=gameWrapper] [class*=icon],
 [class*=switchIndicator]:has(svg:not([style*="left: 1px;"])) {
 	background-color: var(--custom-accent-color) !important;
 }
 
-[class*=liveSmall] {
-	background-color: var(--custom-accent-color) !important;
+[class*=member] :is([class*=subText] path, [class*=icon]) {
+	fill: var(--custom-accent-color) !important;
 }
 
-[class*=member] [class*=subText] path {
-	fill: var(--custom-accent-color) !important;
+[class*=attachedCaretButtonContainer] :is([class*=active] svg, [class*=greenGlow]),
+[class*=member] [class*=icon] {
+    color: var(--custom-accent-color) !important;
 }
