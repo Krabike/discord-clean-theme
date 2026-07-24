@@ -44,8 +44,8 @@ div[data-list-item-id*="members"]:has([class*="infoSection"]){
 	display: none !important;
 }
 
-ul[class*="content"] [class*="sectionDivider"] {
-	&, & div[style*="height: 12px"] {
+ul[class*="content"] {
+	& [class*="sectionDivider"], & div[style*="height: 12px;"] {
 		display: none !important;
 	}
 }
