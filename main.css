@@ -3,6 +3,7 @@
 	--custom-accent: oklch(0.9 0.25 285);
 	--custom-accent-color: color-mix(in oklab, var(--custom-accent), transparent);
 	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 88%);
+	--custom-accent-color-translucent-dark: color-mix(in oklab, var(--custom-accent-color), transparent 96%);
 }
 
 /* Activities */
@@ -111,6 +112,7 @@ ul[class*=content] {
 	--message-mentioned-background-default: var(--custom-accent-color-translucent);
 	--icon-feedback-warning: var(--custom-accent-color);
 	--opacity-green-12: var(--custom-accent-color-translucent) !important;
+	--message-mentioned-background-hover: var(--custom-accent-color-translucent-dark);
 }
 
 
