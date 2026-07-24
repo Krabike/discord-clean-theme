@@ -1,0 +1,57 @@
+/* Activities */
+[class*="membersGroup"]:has([class*="headerContainer"]),
+div[data-list-item-id*="members"]:has([class*="infoSection"]){
+    display: none !important;
+}
+
+/* DM sidebar buttons */
+[class*="sidebarList"] :is(a[href*="/store"], a[href*="/shop"], a[href*="/quest"]) {
+	display: none !important;
+}
+
+/* Servers */
+[class*="guilds"] [class*="listItem"] foreignObject {
+	transition: border-radius 0.2s ease;
+	mask: none;
+	border-radius: 100%;
+
+	&:has([class*="folderButton"]) {
+		border-radius: 25%;
+	}
+
+	&:hover {
+		border-radius: 25%;
+	}
+}
+
+/* Folders */
+[class*="folderGroup"] {
+	--custom-folder-preview-padding: 6px;
+}
+
+[class*="folderPreviewGuildIcon"] {
+	border-radius: 32px !important;
+}
+
+/* Server sidebar */
+[class*="sidebar"] li:has(:is([data-list-item-id*="channels___skill-trees"], [data-list-item-id*="channels___upcoming-events"]))  {
+	display: none !important;
+}
+
+ul[class*="content"] [class*="sectionDivider"] {
+	&, & + div {
+		display: none !important;
+	}
+}
+
+/* Top bar help and inbox */
+[class*="bar"] [class*="trailing"] {
+	& :is([class*="clickable"], [class*="anchor"]) {
+		display: none !important;
+	}
+
+	& [class*="winButtons"]::before {
+		display: none;
+	}
+
+}
