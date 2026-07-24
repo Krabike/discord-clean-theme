@@ -141,7 +141,7 @@ ul[class*=content] {
 	fill: var(--custom-accent-color) !important;
 }
 
-[class*=attachedCaretButtonContainer] :is([class*=active] svg, [class*=greenGlow]),
+[class*=buttonSection] :is([class*=active] svg, [class*=greenGlow]),
 [class*=member] [class*=icon] {
     color: var(--custom-accent-color) !important;
 }
