@@ -44,7 +44,7 @@ ul[class*="content"] [class*="sectionDivider"] {
 	}
 }
 
-/* Top bar help and inbox */
+/* Top bar help and inbox remove*/
 [class*="bar"] [class*="trailing"] {
 	& > *:not([class*=winButtons]) {
 		display: none;
@@ -54,6 +54,10 @@ ul[class*="content"] [class*="sectionDivider"] {
 		display: none;
 	}
 	height: 30px;
+}
+
+[class*=toolbar] {
+	margin-inline-end: 0 !important;
 }
 
 /* Clear text transform at connection line*/
