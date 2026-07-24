@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+	--custom-accent-color: rgb(120, 101, 228);
+	--custom-accent-color-translucent: rgba(112, 70, 190, 0.12);
+}
+
 /* Activities */
 [class*="membersGroup"]:has([class*="headerContainer"]),
 div[data-list-item-id*="members"]:has([class*="infoSection"]){
@@ -60,7 +66,80 @@ ul[class*="content"] [class*="sectionDivider"] {
 	margin-inline-end: 0 !important;
 }
 
-/* Clear text transform at connection line*/
+/* Clear text transform*/
 [class*=connection] {
-	text-transform: none;
+	text-transform: none !important;
+}
+
+/* Voice participants */
+[class*=participantsWrapperAnimated] {
+	& * {
+		text-transform: none !important;
+	}
+
+	& [class*=eyebrow] {
+		text-transform: uppercase !important;
+	}
+}
+
+/* Accent color */
+* {
+	--status-speaking: var(--custom-accent-color);
+	--icon-feedback-positive: var(--custom-accent-color);
+	--icon-strong: var(--custom-accent-color);
+	--text-feedback-positive: var(--custom-accent-color); 
+	--control-primary-background-default: var(--custom-accent-color);
+	--background-brand: var(--custom-accent-color);
+	--radio-background-selected-default: var(--custom-accent-color);
+	--background-feedback-notification: var(--custom-accent-color);
+	--status-positive: var(--custom-accent-color);
+	--selected-tab-item-color: var(--custom-accent-color) !important;
+	--text-link: var(--custom-accent-color);
+	--__card-background-color: var(--custom-accent-color-translucent) !important;
+	--message-mentioned-background-default: var(--custom-accent-color-translucent);
+	--icon-feedback-warning: var(--custom-accent-color);
+}
+
+
+[class*=buttonActive] {
+	background-color: var(--custom-accent-color-translucent) !important;
+	border: none !important;
+	& svg {
+		color: var(--custom-accent-color);
+	}
+}
+
+[class*=rtcConnectionQualityFine] {
+	& [class*=ping] {
+		background-color: var(--custom-accent-color-translucent) !important;
+	}
+
+	& [class*=rtcConnectionStatus] {
+		color: var(--custom-accent-color);
+	}
+}
+
+[class*=gameWrapper] [class*=icon] {
+	background-color: var(--custom-accent-color) !important;
+}
+
+[class*=perksDemoContainer] svg {
+	display: none;
+}
+
+[class*=member] [class*=icon] {
+	fill: var(--custom-accent-color) !important;
+	color: var(--custom-accent-color) !important;
+}
+
+[class*=switchIndicator]:has(svg:not([style*="left: 1px;"])) {
+	background-color: var(--custom-accent-color) !important;
+}
+
+[class*=liveSmall] {
+	background-color: var(--custom-accent-color) !important;
+}
+
+[class*=member] [class*=subText] path {
+	fill: var(--custom-accent-color) !important;
 }
