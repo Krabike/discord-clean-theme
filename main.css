@@ -5,18 +5,18 @@
 }
 
 /* Activities */
-[class*="membersGroup"]:has([class*="headerContainer"]),
-div[data-list-item-id*="members"]:has([class*="infoSection"]){
+[class*=membersGroup]:has([class*=headerContainer]),
+div[data-list-item-id*=members]:has([class*=infoSection]){
     display: none !important;
 }
 
 /* DM sidebar buttons */
-[class*="sidebarList"] :is(a[href*="/store"], a[href*="/shop"], a[href*="/quest"]) {
+[class*=sidebarList] :is(a[href*="/store"], a[href*="/shop"], a[href*="/quest"]) {
 	display: none !important;
 }
 
 /* Servers */
-[class*="guilds"] [class*="listItem"] foreignObject {
+[class*=guilds] [class*=listItem] foreignObject {
 	transition: border-radius 0.2s ease;
 	mask: none;
 	border-radius: 100%;
@@ -30,33 +30,40 @@ div[data-list-item-id*="members"]:has([class*="infoSection"]){
 	}
 }
 
+[class*=upperBadge], [class*=lowerBadge] {
+    /* padding: 2px; */
+    box-shadow: 0 0 0 2px var(--background-base-lowest);
+    border-radius: 100%;
+    background-color: var(--background-base-lowest);
+}
+
 /* Folders */
-[class*="folderGroup"] {
+[class*=folderGroup] {
 	--custom-folder-preview-padding: 6px;
 }
 
-[class*="folderPreviewGuildIcon"] {
+[class*=folderPreviewGuildIcon] {
 	border-radius: 32px !important;
 }
 
 /* Server sidebar */
-[class*="sidebar"] li:has(:is([data-list-item-id*="channels___skill-trees"], [data-list-item-id*="channels___upcoming-events"]))  {
+[class*=sidebar] li:has(:is([data-list-item-id*=channels___skill-trees], [data-list-item-id*=channels___upcoming-events]))  {
 	display: none !important;
 }
 
-ul[class*="content"] {
+ul[class*=content] {
 	& [class*="sectionDivider"], & div[style*="height: 12px;"] {
 		display: none !important;
 	}
 }
 
 /* Top bar help and inbox remove*/
-[class*="bar"] [class*="trailing"] {
+[class*=bar] [class*=trailing] {
 	& > *:not([class*=winButtons]) {
 		display: none;
 	}
 
-	& [class*="winButtons"]::before {
+	& [class*=winButtons]::before {
 		display: none;
 	}
 	height: 30px;
