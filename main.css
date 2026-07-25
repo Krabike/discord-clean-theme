@@ -1,7 +1,6 @@
 /* Variables */
 :root {
-	--custom-accent: oklch(0.9 0.25 285);
-	--custom-accent-color: color-mix(in oklab, var(--custom-accent), transparent);
+	--custom-accent-color: oklch(0.666 0.119 288.49);
 	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 88%);
 	--custom-accent-color-translucent-dark: color-mix(in oklab, var(--custom-accent-color), transparent 96%);
 }
