@@ -1,7 +1,10 @@
 /* Variables */
 :root {
-	--custom-accent-color: oklch(0.666 0.119 288.49);
+	--custom-accent-color: oklch(0.6 0.119 288.49);
+    --custom-accent-color-light: oklch(0.75 0.189 288.49);
+	--custom-accent-color-hover-dark: oklch(0.52 0.119 288.49);
 	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 88%);
+	--custom-accent-color-translucent-light: color-mix(in oklab, var(--custom-accent-color), transparent 70%);
 	--custom-accent-color-translucent-dark: color-mix(in oklab, var(--custom-accent-color), transparent 96%);
 }
 
@@ -18,7 +21,7 @@ div[data-list-item-id*=members]:has([class*=infoSection]){
 
 /* Servers */
 [class*=guilds] [class*=listItem] foreignObject {
-	transition: border-radius 0.2s ease;
+	transition: border-radius 0.2s ease-in-out;
 	mask: none;
 	border-radius: 100%;
 
@@ -95,55 +98,50 @@ ul[class*=content] {
 }
 
 /* Accent color */
-* {
-	--status-speaking: var(--custom-accent-color);
-	--icon-feedback-positive: var(--custom-accent-color);
-	--icon-strong: var(--custom-accent-color);
-	--text-feedback-positive: var(--custom-accent-color); 
-	--control-primary-background-default: var(--custom-accent-color);
-	--background-brand: var(--custom-accent-color);
-	--radio-background-selected-default: var(--custom-accent-color);
-	--background-feedback-notification: var(--custom-accent-color);
-	--status-positive: var(--custom-accent-color);
-	--selected-tab-item-color: var(--custom-accent-color) !important;
-	--text-link: var(--custom-accent-color);
-	--__card-background-color: var(--custom-accent-color-translucent) !important;
-	--message-mentioned-background-default: var(--custom-accent-color-translucent);
-	--icon-feedback-warning: var(--custom-accent-color);
-	--opacity-green-12: var(--custom-accent-color-translucent) !important;
-	--message-mentioned-background-hover: var(--custom-accent-color-translucent-dark);
+:root {
+    --green-new-40: var(--custom-accent-color);
+    --green-new-31: var(--custom-accent-color-light);
+    --green-new-30: var(--custom-accent-color-light);
+    --green-new-25: var(--custom-accent-color-light);
+    --blue-new-37: var(--custom-accent-color-light);
+    --blurple-21: var(--custom-accent-color);
+    --blurple-36: var(--custom-accent-color-light);
+    --blurple-50: var(--custom-accent-color);
+    --blurple-60: var(--custom-accent-color-hover-dark);
+    --opacity-green-8-hsl: 248.13 39.7% 60.74%; /* --custom-accent-color in hsl */
+	--opacity-green-12: var(--custom-accent-color-translucent);
+    --opacity-green-24: var(--custom-accent-color-translucent-light);
+    /* idk if it brokes smth */
+    --red-400: var(--custom-accent-color);
+
 }
 
-
-[class*=buttonActive] {
-	background-color: var(--custom-accent-color-translucent) !important;
-	border: none !important;
-	& svg {
-		color: var(--custom-accent-color);
-	}
-}
-
-[class*=rtcConnectionQualityFine] {
-	& [class*=ping] {
-		background-color: var(--custom-accent-color-translucent) !important;
-	}
-
-	& [class*=rtcConnectionStatus] {
-		color: var(--custom-accent-color);
-	}
-}
-
-[class*=liveSmall],
-[class*=gameWrapper] [class*=icon],
-[class*=switchIndicator]:has(svg:not([style*="left: 1px;"])) {
-	background-color: var(--custom-accent-color) !important;
-}
-
+/* Guild members list icons */
 [class*=member] :is([class*=subText] path, [class*=icon]) {
 	fill: var(--custom-accent-color) !important;
 }
 
-[class*=buttonSection] :is([class*=active] svg, [class*=greenGlow]),
-[class*=member] [class*=icon] {
-    color: var(--custom-accent-color) !important;
+/* Notification badges */
+[class*=lowerBadge] {
+    --background-feedback-notification: var(--custom-accent-color);
+    --badge-notification-background: var(--custom-accent-color);
+}
+
+/* Switch button */
+[class*=switchIndicator]:has(svg:not([style*="left: 1px;"])),
+/* Game preview? (Big S when demo) */
+[class*=gameWrapper] [class*=icon] {
+    background-color: var(--custom-accent-color) !important;
+}
+
+/* Mentioned */
+[class*=message][class*=mentioned] {
+    --message-mentioned-background-default: var(--custom-accent-color-translucent);
+    --message-mentioned-background-hover: var(--custom-accent-color-translucent-dark);
+    --icon-feedback-warning: var(--custom-accent-color-light);
+}
+
+/* Crown icon */
+[class*=member] svg[class*=ownerIcon] {
+    --text-feedback-warning: var(--custom-accent-color); 
 }
