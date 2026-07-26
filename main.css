@@ -122,7 +122,7 @@ ul[class*=content] {
 }
 
 /* Notification badges */
-[class*=lowerBadge] {
+[class*=lowerBadge], [class*=unreadMentionsBar] {
     --background-feedback-notification: var(--custom-accent-color);
     --badge-notification-background: var(--custom-accent-color);
 }
