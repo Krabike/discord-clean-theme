@@ -116,15 +116,15 @@ ul[class*=content] {
 
 }
 
+.theme-dark {
+    /* Notification badges */
+    --background-feedback-notification: var(--custom-accent-color);
+    --badge-notification-background: var(--custom-accent-color);
+}
+
 /* Guild members list icons */
 [class*=member] :is([class*=subText] path, [class*=icon]) {
 	fill: var(--custom-accent-color) !important;
-}
-
-/* Notification badges */
-[class*=lowerBadge], [class*=unreadMentionsBar] {
-    --background-feedback-notification: var(--custom-accent-color);
-    --badge-notification-background: var(--custom-accent-color);
 }
 
 /* Switch button */
