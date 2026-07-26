@@ -69,27 +69,10 @@ ul[class*=content] {
 	& [class*=winButtons]::before {
 		display: none;
 	}
-	height: 30px;
 }
 
 [class*=toolbar] {
 	margin-inline-end: 0 !important;
-}
-
-/* Clear text transform*/
-[class*=connection] {
-	text-transform: none !important;
-}
-
-/* Voice participants */
-[class*=participantsWrapperAnimated] {
-	& * {
-		text-transform: none !important;
-	}
-
-	& [class*=eyebrow] {
-		text-transform: uppercase !important;
-	}
 }
 
 /* Nitro icon near demo quality */
