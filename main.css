@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+	--custom-red-400: oklch(0.5959 0.1924 23.27);
 	--custom-accent-color: oklch(0.6 0.119 288.49);
     --custom-accent-color-light: oklch(0.75 0.189 288.49);
 	--custom-accent-color-hover-dark: oklch(0.52 0.119 288.49);
@@ -127,4 +128,9 @@ ul[class*=content] {
 /* Crown icon */
 [class*=member] svg[class*=ownerIcon] {
     --text-feedback-warning: var(--custom-accent-color); 
+}
+
+/* Mute color reset */
+[class*=attachedCaretButtonContainer] {
+    --red-400: var(--custom-red-400);
 }
