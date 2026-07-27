@@ -4,8 +4,8 @@
 	--custom-accent-color: oklch(0.6 0.119 288.49);
     --custom-accent-color-light: oklch(0.75 0.189 288.49);
 	--custom-accent-color-hover-dark: oklch(0.52 0.119 288.49);
-	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 88%);
-	--custom-accent-color-translucent-light: color-mix(in oklab, var(--custom-accent-color), transparent 70%);
+	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 82%);
+	--custom-accent-color-translucent-light: color-mix(in oklab, var(--custom-accent-color), transparent 62%);
 	--custom-accent-color-translucent-dark: color-mix(in oklab, var(--custom-accent-color), transparent 96%);
 }
 
@@ -92,7 +92,7 @@ ul[class*=content] {
     --blurple-36: var(--custom-accent-color-light);
     --blurple-50: var(--custom-accent-color);
     --blurple-60: var(--custom-accent-color-hover-dark);
-    --opacity-green-8-hsl: 248.13 39.7% 60.74%; /* --custom-accent-color in hsl */
+    --opacity-green-8-hsl: 249.79 100% 80.32%; /* --custom-accent-color-light in hsl */
 	--opacity-green-12: var(--custom-accent-color-translucent);
     --opacity-green-24: var(--custom-accent-color-translucent-light);
     /* idk if it brokes smth */
