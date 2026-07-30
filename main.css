@@ -83,6 +83,8 @@ ul[class*=content] {
 
 /* Accent color */
 :root {
+	--green-new-60: var(--custom-accent-color-hover-dark);
+    --green-new-50: var(--custom-accent-color);
     --green-new-40: var(--custom-accent-color);
     --green-new-31: var(--custom-accent-color-light);
     --green-new-30: var(--custom-accent-color-light);
