@@ -113,6 +113,29 @@ ul[class*=content] {
 	fill: var(--custom-accent-color) !important;
 }
 
+/* Private messages user icons */
+[data-list-item-id*=private-channels] :is(svg[class*=icon] path) {
+    fill: var(--custom-accent-color);
+}
+
+[data-list-item-id*=private-channels] + [class*=iconsContainer] [class*=favoriteIcon] {
+    color: var(--custom-accent-color);
+}
+
+/* Voice message */
+[class*=mosaicItem] [class*=playButtonContainer] {
+    background-image: linear-gradient(151.11deg, var(--custom-accent-color-light) 16.55%, var(--custom-accent-color) 104.36%) !important;
+}
+
+[class*=volumeButtonSlider] [class*=mediaBarGrabber] {
+    background-color:  var(--custom-accent-color-hover-dark) !important;
+}
+
+/* Invite */
+[class*=inviteRowStatusIcon] path {
+    fill: var(--custom-accent-color-light);
+}
+
 /* Switch button */
 [class*=switchIndicator]:has(svg:not([style*="left: 1px;"])),
 /* Game preview? (Big S when demo) */
