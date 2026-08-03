@@ -4,6 +4,7 @@
 	--custom-accent-color: oklch(0.6 0.119 288.49);
     --custom-accent-color-light: oklch(0.75 0.189 288.49);
 	--custom-accent-color-hover-dark: oklch(0.52 0.119 288.49);
+	--custom-accent-color-active-dark: oklch(0.46 0.089 288.49);
 	--custom-accent-color-translucent: color-mix(in oklab, var(--custom-accent-color), transparent 82%);
 	--custom-accent-color-translucent-light: color-mix(in oklab, var(--custom-accent-color), transparent 62%);
 	--custom-accent-color-translucent-dark: color-mix(in oklab, var(--custom-accent-color), transparent 96%);
@@ -106,6 +107,8 @@ ul[class*=content] {
     /* Notification badges */
     --background-feedback-notification: var(--custom-accent-color);
     --badge-notification-background: var(--custom-accent-color);
+	/* Control active btn */
+	--control-connected-background-active: var(--custom-accent-color-active-dark);
 }
 
 /* Guild members list icons */
